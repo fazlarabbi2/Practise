@@ -4,86 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page - Image Gallery</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h2>Your Website</h2>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3" href="#">Your Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main>
-        <!-- Top Section with 3 Images - Full Width Below Navbar -->
+        <!-- Hero Section with 3 Images - Bootstrap Grid -->
         <section class="hero-section" id="home">
-            <div class="image-gallery">
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mountain Landscape">
-                        <div class="overlay">
-                            <h3>Mountain Adventure</h3>
-                            <p>Explore breathtaking landscapes</p>
+            <div class="container-fluid p-0">
+                <div class="row g-0 image-gallery">
+                    <div class="col-4">
+                        <div class="image-card h-100">
+                            <div class="image-container">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     class="img-fluid w-100 h-100" alt="Mountain Landscape">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center">
+                                    <h3 class="text-white mb-3">Mountain Adventure</h3>
+                                    <p class="text-white text-center">Explore breathtaking landscapes</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ocean View">
-                        <div class="overlay">
-                            <h3>Ocean Paradise</h3>
-                            <p>Discover pristine waters</p>
+                    <div class="col-4">
+                        <div class="image-card h-100">
+                            <div class="image-container">
+                                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     class="img-fluid w-100 h-100" alt="Ocean View">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center">
+                                    <h3 class="text-white mb-3">Ocean Paradise</h3>
+                                    <p class="text-white text-center">Discover pristine waters</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Forest Path">
-                        <div class="overlay">
-                            <h3>Forest Journey</h3>
-                            <p>Walk through ancient woods</p>
+                    <div class="col-4">
+                        <div class="image-card h-100">
+                            <div class="image-container">
+                                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                     class="img-fluid w-100 h-100" alt="Forest Path">
+                                <div class="overlay d-flex flex-column justify-content-center align-items-center">
+                                    <h3 class="text-white mb-3">Forest Journey</h3>
+                                    <p class="text-white text-center">Walk through ancient woods</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Additional Content Section -->
-        <section class="content-section">
+        <!-- Content Section with Bootstrap -->
+        <section class="content-section py-5">
             <div class="container">
-                <h2>About Our Gallery</h2>
-                <p>Welcome to our beautiful image gallery featuring stunning photography from around the world. Each image tells a story and captures the essence of natural beauty.</p>
-                <div class="features">
-                    <div class="feature">
-                        <h3>High Quality</h3>
-                        <p>All images are carefully selected for their exceptional quality and visual impact.</p>
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="display-4 fw-bold text-dark">About Our Gallery</h2>
+                        <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                            Welcome to our beautiful image gallery featuring stunning photography from around the world. 
+                            Each image tells a story and captures the essence of natural beauty.
+                        </p>
                     </div>
-                    <div class="feature">
-                        <h3>Interactive Experience</h3>
-                        <p>Enjoy smooth hover animations and engaging visual effects throughout the site.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card text-center p-4 h-100 bg-light rounded-3 shadow-sm">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-star fs-1 text-warning"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-dark mb-3">High Quality</h3>
+                            <p class="text-muted">All images are carefully selected for their exceptional quality and visual impact.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Responsive Design</h3>
-                        <p>Our gallery looks beautiful on all devices, from desktop to mobile.</p>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card text-center p-4 h-100 bg-light rounded-3 shadow-sm">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-mouse-pointer fs-1 text-primary"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-dark mb-3">Interactive Experience</h3>
+                            <p class="text-muted">Enjoy smooth hover animations and engaging visual effects throughout the site.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="feature-card text-center p-4 h-100 bg-light rounded-3 shadow-sm">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-mobile-alt fs-1 text-success"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-dark mb-3">Responsive Design</h3>
+                            <p class="text-muted">Our gallery looks beautiful on all devices, from desktop to mobile.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- Bootstrap Footer -->
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <p>&copy; 2025 Your Website. All rights reserved.</p>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Your Website. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
